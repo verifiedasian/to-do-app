@@ -1,3 +1,7 @@
+# To Do List App
+
+Practising using ReactJS by creating a To Do List Application
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
