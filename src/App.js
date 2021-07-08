@@ -16,7 +16,7 @@ class App extends React.Component {
   handleClick(id) {
     this.setState((prevState) => {
       const newToDo = prevState.todos.map((item) => {
-        if (item.id == id) {
+        if (item.id === id) {
           return {
             ...item,
             completed: !item.completed,
@@ -24,7 +24,9 @@ class App extends React.Component {
         }
         return item;
       });
-      return newToDo;
+      return {
+        todos: newToDo,
+      };
     });
   }
 
@@ -33,7 +35,7 @@ class App extends React.Component {
       <ToDoItem key={item.id} item={item} handleClick={this.handleClick} />
     ));
 
-    return <div class="todo-list">{toDoItems}</div>;
+    return <div className="todo-list">{toDoItems}</div>;
   }
 }
 
